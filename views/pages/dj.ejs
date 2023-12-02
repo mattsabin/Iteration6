@@ -1,0 +1,39 @@
+<h1>DJ View</h1>
+<h3><%= djName %></h3>
+  <p>Modify the playlist for any of your timeslots below.</p>
+  <div class="grid">
+    <div class="djtimeslot">
+      <div class="title">Timeslot</div>
+      <hr />
+      <ul id="listoftimes">
+        <!-- Times go here -->
+      </ul>
+    </div>
+    <div class="djplaylist">
+      <div class="title">Playlist</div>
+      <hr />
+      <ul id="listofsongs">
+        <!-- Songs go here -->
+      </ul>
+    </div>
+    <div class="songadd">
+      <div class="title">Song Search</div>
+      <hr />
+      <div class="navsearch songsearch">
+        <form class="searchform" action="#">
+          <input
+            type="text"
+            style="width: 100%"
+            class="songsearchinput"
+            placeholder="Search for song name here!"
+            id="songsearchinput"
+          />
+        </form>
+      </div>
+      <ul id="searchsongs">
+      </ul>
+    </div>
+  </div>
+  <br />
+  <button id="save" onclick="outputPlaylist();">Save</button>
+  <a class="btn" href="/logout">Log Out</a>

@@ -1,0 +1,29 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title><%= role %> View</title>
+<link rel="stylesheet" href="/style.css" />
+<% if(role === "Producer") { %>
+<script>
+    var djs = <%- JSON.stringify(djsList) %>;
+    var songs = <%- JSON.stringify(songList) %>;
+</script>
+<script src="/producer.js"></script>
+<% } %>
+
+<% if(role === "DJ") { %>
+    <script>
+        var djs = <%- JSON.stringify(djsList) %>;
+        var songs = <%- JSON.stringify(songList) %>;
+        var loggedInDJ = <%- JSON.stringify(djName) %>;
+    </script>
+    <script src="/dj.js"></script>
+<% } %>
+<% if(role === "Listener") { %>
+    <script>
+        var djs = <%- JSON.stringify(djsList) %>;
+        var songs = <%- JSON.stringify(songList) %>;
+        var timeslots = <%- JSON.stringify(timeslotList) %>;
+        var cur_Song = <%-JSON.stringify(currentSong) %>;
+    </script>
+    <script src="/listener.js"></script>
+<% } %>

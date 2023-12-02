@@ -1,0 +1,45 @@
+<h1>Producer View</h1>
+  <p>Choose a DJ, a time-slot, and finalize the playlist!</p>
+  <div class="grid">
+    <div class="djlist">
+      <div class="title">DJ List</div>
+      <hr />
+      <ul id="listofdjs">
+        <!-- DJs go here -->
+      </ul>
+    </div>
+    <div class="timeslot">
+      <div class="title">Timeslot</div>
+      <hr />
+      <ul id="listoftimes">
+        <!-- Times go here -->
+      </ul>
+    </div>
+    <div class="playlist">
+      <div class="title">DJ's Playlist</div>
+      <hr />
+      <ul id="listofsongs">
+        <!-- Songs go here -->
+      </ul>
+    </div>
+    <div class="songadd">
+      <div class="title">Song Search</div>
+      <hr />
+      <div class="navsearch songsearch">
+        <form class="searchform" action="#">
+          <input
+            type="text"
+            style="width: 100%"
+            class="songsearchinput"
+            placeholder="Search for song name here!"
+            id="songsearchinput"
+          />
+        </form>
+      </div>
+      <ul id="searchsongs">
+      </ul>
+    </div>
+  </div>
+  <br />
+  <button id="save" onclick="outputPlaylist();">Save</button>
+  <a class="btn" href="/logout">Log Out</a>
